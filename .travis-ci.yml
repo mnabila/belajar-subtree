@@ -1,0 +1,19 @@
+sudo: required
+
+services:
+- docker
+
+arch:
+  packages:
+  # pacman packages
+  - python
+  - aria2
+  - speedtest-cli
+  # aur packages
+  # - go-git
+  # packages from papyros repo
+  # - papyros-shell
+
+script:
+- "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
+- speedtest-cli

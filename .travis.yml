@@ -7,6 +7,7 @@ arch:
   packages:
   # pacman packages
   - python
+  - python-pip
   - aria2
   - speedtest-cli
   # aur packages
@@ -15,5 +16,6 @@ arch:
   # - papyros-shell
 
 script:
-- "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
-- speedtest-cli
+  - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
+  - "python --version" 
+  - "speedtest-cli"
